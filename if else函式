@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="bayflow.php" method="post">
+        阿寶的三個月業績 <br>
+        <input type="text" name="month1_1" placeholder="第一個月"> <br>
+        <input type="text" name="month1_2" placeholder="第二個月"> <br>
+        <input type="text" name="month1_3" placeholder="第三個月"> <br>
+        <br>
+        <br>
+        阿花的三個月業績 <br>
+        <input type="text" name="month2_1" placeholder="第一個月"> <br>
+        <input type="text" name="month2_2" placeholder="第二個月"> <br>
+        <input type="text" name="month2_3" placeholder="第三個月"> <br>
+        <button type="submit">結算</button>
+    </form>
+</body>
+</html
+----------------------------------------------------------------------------
+<?php 
+
+$month1_1 = $_REQUEST['month1_1'];
+$month1_2 = $_REQUEST['month1_2'];
+$month1_3 = $_REQUEST['month1_3'];
+
+$month2_1 = $_REQUEST['month2_1'];
+$month2_2 = $_REQUEST['month2_2'];
+$month2_3 = $_REQUEST['month2_3'];
+
+$ans = $month1_1 + $month1_2 + $month1_3 ;
+$ans2 = $month2_1 + $month2_2 + $month2_3;
+
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    這季阿寶的總業績是<?= $ans ?><br>
+
+    這季阿花的總業績是<?= $ans2 ?><br>
+
+    <?php if ($ans > $ans2) :?><br>
+    阿寶比較好，請阿花加油。<br>
+    <?php else :?>
+    阿花比較好，請阿寶加油。<br>
+    <?php endif; ?>
+        
+</body>
+</html>
