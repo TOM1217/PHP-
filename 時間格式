@@ -1,0 +1,30 @@
+<?php
+date_default_timezone_set("Asia/Taipei");
+
+$dateString = date("Y/m/d H:i:s");
+
+$daysOfMonth = date('t');
+$timestamp = date('U');
+$year = date('Y');
+$ampm = date('a');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <?= $dateString?>
+    <br>
+    這個月 <?= date('M')?>共有 <?= $daysOfMonth?>
+    <br>
+    絕對時間格式: <?= $timestamp?>
+    <br>
+    今年是民國 <?= $year - 1911?>
+    <br>
+    <?= $ampm?>
+</body>
+</html>
