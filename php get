@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <P>
+        <a href="get.php?name=Tom&blood=A&birthdate=1994-12-17">Tom</a>
+    </P>
+    <P>
+        <a href="get.php?name=girl&blood=AB&birthdate=1987-08-07">girl</a>
+    </P>
+    <P>
+        <a href="get.php?name=boy&blood=B&birthdate=1966-06-06">boy</a>
+    </P>
+</body>
+
+</html>
+--------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        姓名: <?= $_GET['name']?>
+        <br>
+        血型: <?= $_GET['blood']?>
+        <br>
+        生日: <?= $_GET['birthdate']?>
+
+
+</body>
+</html>
