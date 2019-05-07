@@ -1,0 +1,36 @@
+<?php
+
+$ch = $_REQUEST['ch'];
+$en = $_REQUEST['en'];
+$math = $_REQUEST['math'];
+
+$total= $ch + $en + $math;
+$avg = $total / 3;
+
+?>
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+    國文成績為: <?= htmlspecialchars ($ch) ?>
+    </p>
+    <p>
+    英文成績為: <?= htmlspecialchars ($en) ?>
+    </p>
+    <p>
+    數學成績為:<?= htmlspecialchars( $math) ?>
+    </p> 
+    <p>
+    總成績: <?= htmlspecialchars ($total) ?>
+    </p>
+    <p>
+    平均成績: <?= htmlspecialchars($avg) ?>
+    </p>
+</body
+</html>
